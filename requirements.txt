@@ -3,8 +3,11 @@ groq
 python-dotenv
 langchain-text-splitters
 langchain-community
+langchain-core
 faiss-cpu
 sentence-transformers
 pypdf
+cryptography
+pyaes
 requests
 beautifulsoup4
