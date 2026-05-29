@@ -8,3 +8,5 @@ sentence-transformers
 pypdf
 requests
 beautifulsoup4
+cryptography
+pyaes
