@@ -14,7 +14,7 @@ def extract_text(file, client) -> str:
         pdf = PdfReader(file)
         text = ""
         for page in pdf.pages:
-            text += page.extract_text()
+            text += page.extract_text() or ""
         return text
 
     elif file.name.lower().endswith((".png", ".jpg", ".jpeg", ".webp", ".bmp")):
