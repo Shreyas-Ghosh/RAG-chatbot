@@ -3,7 +3,7 @@ groq
 python-dotenv
 langchain-text-splitters
 langchain-community
-FIASS
+faiss-cpu
 sentence-transformers
 pypdf
 requests
