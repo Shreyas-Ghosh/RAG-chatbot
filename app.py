@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 from dotenv import load_dotenv
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.embeddings import HuggingFaceEmbeddings
-from langchain_community.vectorstores import Chroma
+from langchain_community.vectorstores import FAISS
 from pypdf import PdfReader
 
 load_dotenv()
@@ -124,7 +124,7 @@ def build_vectorstore(text):
     embeddings = HuggingFaceEmbeddings(
         model_name="all-MiniLM-L6-v2"
     )
-    vectorstore = Chroma.from_texts(chunks, embeddings)
+    vectorstore = FAISS.from_texts(chunks, embeddings)
     return vectorstore
 
 # ── Process sources ───────────────────────────────────
